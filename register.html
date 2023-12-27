@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="register.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="navbar">
+     <div class="logo1">
+            <img src="indiapostlogo.png " style="height: 100px;width: auto;">
+     </div>
+    <div class="logo_1">
+        <img src="logo.jpg" alt="national_emblem" style="height: 80px;width: 113px;">
+
+    </div>
+    <div class="logo_2">
+        <img src="G20.png" alt="national_emblem" style="height: 80px;width: 113px;">
+
+    </div>
+    </div>
+    <div class="mainbox">
+    <h1 style="margin-top: 2%;">REGISTER HERE</h1>
+    <form action="/register" method="post" autocomplete="on">
+        <!--{% csrf_token  %}-->
+        <div class="box1">
+        <div>
+            <label for="name">Enter Full Name:</label>
+            <br>
+            <input type="text" id="name" name="name" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <br>
+            <input type="number" id="phone" name="phone" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="HouseNo">House no./Flat no.:</label>
+            <br>
+            <input type="text" id="HouseNo" name="HouseNo" required style="width: 70%; height:20px;">
+        </div>
+        <div >
+            <label for="Street">Street/Roadno.:</label>
+            <br>
+            <input type="text" id="Street" name="Street" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="city">city/town:</label>
+            <br>
+            <input type="text" id="city" name="city" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="district">District:</label>
+            <br>
+            <input type="text" id="district" name="district" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="Pincode">Pincode:</label>
+            <br>
+            <input type="number" id="Pincode" name="Pincode" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="State">State:</label>
+            <br>
+            <input type="text" id="State" name="state" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="Country">Country:</label>
+            <br>
+            <input type="text" id="Country" name="Country" required style="width: 70%; height:20px;">
+        </div>
+        </div>
+        <br>
+        <h2>CREATE ACCOUNT:</h2>
+        <div class="box2">
+        <div >
+            <label for="email">email address</label>
+            <br>
+            <input type="email" id="email" name="email" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <br>
+            <input type="password" id="password1" name="password" required style="width: 70%; height:20px;">
+        </div>
+        <div>
+            <label for="password1">Re-enter Password</label>
+            <br>
+            <input type="password" id="password2" name="password1" required style="width: 70%; height:20px;">
+        </div>
+
+        <div class="but">
+            <button type="submit" style="font-size: large;background-color: rgb(179, 3, 3);padding-top: 2%;padding-bottom: 2%;padding-left: 2%;padding-right: 2%;color: white;margin-top: 2%;">Register</button>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

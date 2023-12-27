@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.login {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo1 img {
+    display: block;
+    margin-top: 0 ;
+    margin-bottom:100px;
+    margin-right: 80px;
+    max-width: 200px;
+    height: 100px;
+}
+
+form {
+    margin-top: 20px;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.email,
+.password {
+    margin-bottom: 15px;
+}
+
+.email label,
+.password label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.email input,
+.password input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.forgot{
+    display:flex;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+}
+.fgt:hover{
+    text-decoration: line-through;
+
+
+}
+.register{
+    margin-left: 60%;
+}
