@@ -1,0 +1,18 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding: 0;
+  
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.add{
+    display:flex;
+    margin: 0%;
+}
+.address{
+    margin:0px;
+}
+.barcode-section {
+    margin-top: 2%;
+}

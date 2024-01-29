@@ -1,0 +1,58 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'user/index.css'%}">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="main-nav">
+        <div class="navbar">
+            <div >
+                   <img class="logo1" src="{% static 'user/indiapostlogo.png ' %}" >
+            </div>
+           <div >
+               <img class="logo_1" src="{% static 'user/logo.jpg ' %}" alt="national_emblem" > 
+       
+           </div>
+           <div >
+               <img class="logo_2" src="{% static 'user/G20.png ' %}" alt="national_emblem" >
+       
+           </div>
+    
+           <div >
+            <img class="logo_3" src="{% static 'user/indiapostlogo.png ' %}" >
+         </div>
+           </div>
+        </div>
+        
+    <div class="login">
+       <h1><u>India Post Invoice Generator</u></h1>
+       <h1>Login</h1>
+ {% for message in messages %}
+        <div class="alert-message {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+   {% endfor %}
+    <form action=" " method="post" autocomplete="on">
+        {% csrf_token %}
+        <div class="email">
+            <label for="username">Email:</label>
+            <input  class="input" type="email" id="username" name="username" required>
+        </div>
+        <div class="password">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="input" required>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </div>
+    </form>
+    <div class="forgot">
+    <div class="fgt">
+    <p><a href="/forgot-password">Forgot Password</a></p></div>
+    <div class="register"><p><a href="/register">register here</a></p></div>
+    </div>
+</body>
+</html>

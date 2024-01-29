@@ -1,0 +1,119 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'user/register.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="main-nav">
+    <div class="navbar">
+        
+        <div class="logo1">
+            <img src="{% static 'user/indiapostlogo.png ' %} " >
+     </div>
+    <div class="logo_1">
+        <img src="{% static 'user/logo.jpg ' %}" alt="national_emblem" >
+
+    </div>
+    <div class="logo_2">
+        <img src="{% static 'user/G20.png ' %}" alt="national_emblem" >
+    </div>
+    
+    </div>
+</div>
+    <div class="mainbox">
+        <div class="container">
+    <h1 > REGISTER HERE</h1>
+    <form action="/register" method="post" autocomplete="on">
+        {% csrf_token  %}
+        <div class="box1">
+            <div class="container">
+        <div>
+            <label for="name">Enter Full Name:</label>
+            <br>
+            <input type="text" id="name" name="name"  class="input" required >
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <br>
+            <input type="number" id="phone" name="phone" class="input" required >
+        </div>
+        <div>
+            <label for="HouseNo">House no./Flat no.:</label>
+            <br>
+            <input type="text" id="HouseNo" name="HouseNo" class="input" required >
+        </div>
+        <div >
+            <label for="Street">Street/Roadno.:</label>
+            <br>
+            <input type="text" id="Street" name="Street" class="input" required >
+        </div>
+        <div>
+            <label for="city">city/town:</label>
+            <br>
+            <input type="text" id="city" name="city" class="input" required >
+        </div>
+        <div>
+            <label for="district">District:</label>
+            <br>
+            <input type="text" id="district" name="district" class="input" required >
+        </div>
+        <div>
+            <label for="Pincode">Pincode:</label>
+            <br>
+            <input type="number" id="Pincode" name="Pincode" class="input" required >
+        </div>
+        <div>
+            <label for="State">State:</label>
+            <br>
+            <input type="text" id="State" name="state" class="input" rdequired >
+        </div>
+        <div>
+            <label for="Country">Country:</label>
+            <br>
+            <input type="text" id="Country" name="Country" class="input" required >
+        </div>
+        </div></div>
+        <br>
+        <h1>CREATE ACCOUNT:</h1>
+        <div class="box2">
+            <div class="container">
+        <div >
+            <label for="email"><b>Email Address:</b></label>
+            <br>
+            <input type="email" id="email" name="email"  class="input" required >
+        </div>
+        <div>
+            <label for="password"><b>Password:</b>(only strong or very strong passwords allowed)</label>
+            <br>
+            <input type="password" id="password1" name="password" class="input" required >
+        </div>
+        <div class="password-strength">
+        <p>password strength:</p>
+        <p id="password-strength-text">none</p>
+        </div>
+        <meter id="password-strength-meter" min="0" max="4" low="2" high="3" optimum="4"></meter>
+        <div>
+            <label for="password1"><b>Re-enter Password:</b></label>
+            <br>
+            <input type="password" id="password2" name="password1"  class="input" required >
+        </div>
+        
+
+        <div >
+            <button type="submit" class="but" >Register</button>
+        </div></div>
+    </div>
+    </form></div>
+    {% for message in messages %}
+        <div class="alert-message {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
+   {% endfor %}
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"> </script>
+<script src="{% static 'user/script.js'%}"></script>
+</html>

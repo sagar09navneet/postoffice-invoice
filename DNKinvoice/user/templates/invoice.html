@@ -1,0 +1,180 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <link rel="stylesheet" href="{% static 'user/invoice.css'%}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shipping Details</title>
+    <!-- Include JsBarcode library -->
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="nav-toggle">
+        <a href="/myprofile"><i class="fa-solid fa-user"></i></a> 
+    </div>
+
+<div class="main-nav">
+    <div class="navbar">
+        <div >
+               <img class="logo1" src="{% static 'user/indiapostlogo.png ' %} " >
+        </div>
+       <div >
+           <img class="logo_1" src="{% static 'user/logo.jpg ' %}" alt="national_emblem" >
+   
+       </div>
+       <div >
+           <img class="logo_2" src="{% static 'user/G20.png ' %}" alt="national_emblem" >
+   
+       </div>
+       </div>
+    <hr>
+   
+       <div class="navbar2">   
+            <div class="flex">
+                <a class="profile" href="/myprofile">My Profile</a>
+            </div>
+        </div>
+    
+
+
+
+    <hr>
+       </div>
+   {% block content %}
+    {% if user_data %}
+    <div class="main container">
+    <h1>Shipping Details</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="box1">
+        <fieldset class="box1">
+            <legend>From</legend>
+            <div class="info">
+                <label for="fromName">Name:</label>
+                <input type="text" id="fromName" name="fromName" value="{{user_data.full_name}}" class="input" readonly>
+            </div>
+            <div class="info">
+                <label for="fromEmail">Email:</label>
+                <input type="email" id="fromEmail" name="fromEmail" value="{{email}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromPhone">Phone Number:</label>
+                <input type="number" id="fromPhone" name="fromPhone" value="{{user_data.phone_number}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromHouseNo">House/Building No:</label>
+                <input type="text" id="fromHouseNo" name="fromHouseNo" value="{{user_data.house_number}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromStreet">Street/Road No:</label>
+                <input type="text" id="fromStreet" name="fromStreet" value="{{user_data.street}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromCity">City/Town:</label>
+                <input type="text" id="fromCity" name="fromCity" value="{{user_data.city}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromDistrict">District:</label>
+                <input type="text" id="fromDistrict" name="fromDistrict" value="{{user_data.district}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromPincode">Pin Code:</label>
+                <input type="number" id="fromPincode" name="fromPincode" value="{{user_data.pincode}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromState">State:</label>
+                <input type="text" id="fromState" name="fromState" value="{{user_data.state}}" class="input" readonly >
+            </div>
+            <div class="info">
+                <label for="fromcountry">Country:</label>
+                <input type="text" id="fromcountry" name="fromcountry" value="{{user_data.country}}"class="input" readonly >
+            </div>
+        </fieldset>
+    </div>
+      
+       {%else%}
+          
+        {%endif%}
+        {% endblock content %}
+        <div class="box2">
+        <fieldset>
+            <legend>To</legend>
+            <div class="info">
+                <label for="toName">Name:</label>
+                <input type="text" id="toName"  class="input" name="toName"  required>
+            </div>
+            <div class="info">
+                <label for="toEmail">Email:</label>
+                <input type="email" id="toEmail" name="toEmail" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toPhone">Phone Number:</label>
+                <input type="number" id="toPhone" name="toPhone"class="input" required >
+            </div>
+            <div class="info">
+                <label for="toHouseNo">House/Building No:</label>
+                <input type="text" id="toHouseNo" name="toHouseNo"class="input" required >
+            </div>
+            <div class="info">
+                <label for="toStreet">Street/Road No:</label>
+                <input type="text" id="toStreet" name="toStreet" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toCity">City/Town:</label>
+                <input type="text" id="toCity" name="toCity" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toDistrict">District:</label>
+                <input type="text" id="toDistrict" name="toDistrict" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toPincode">Pin Code:</label>
+                <input type="number" id="toPincode" name="toPincode" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toState">State:</label>
+                <input type="text" id="toState" name="toState" class="input" required >
+            </div>
+            <div class="info">
+                <label for="toCountry">Country:</label>
+                <input type="text" id="toCountry" name="toCountry" class="input" required >
+            </div>
+        </fieldset></div>
+        <div class="barcode">
+        <div>
+            <label for="barcodeNo"><h1>Barcode Number:</h1></label>
+            <input type="text" id="barcodeNo" name="barcodeNo" class="input" required >
+            <button type="button" onclick="generateBarcode()" class="bar">Generate Barcode</button>
+        </div>
+        <div>
+            <svg id="barcode"></svg>
+        </div> 
+    </div>
+    <div >
+        <button type="submit" class="but" >Submit</button>
+    </div>
+    </form>
+</div>
+
+
+    <script>
+        function generateBarcode() {
+            const barcodeNo = document.getElementById('barcodeNo').value;
+            JsBarcode("#barcode", barcodeNo, {
+                format: "CODE39",
+                width: 2,
+                height: 50,
+                displayValue: true
+            });
+            return false;
+        }
+    </script>
+
+    
+</body>
+
+
+</html>

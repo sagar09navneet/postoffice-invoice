@@ -1,0 +1,328 @@
+html {
+    overflow-x: hidden;
+  }
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.main-nav{
+    height:100px;
+    width: 100%;
+}
+.navbar{
+    height:80px;
+    width:100%;
+    background-color: #c3cbdc;
+    background-image: linear-gradient(147deg, #c3cbdc 0%, #edf1f4 74%);
+    display :flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+.logo1{
+ left: 0%;
+ margin-right: 60%;
+ height: 60px;
+ width: 113px;
+ padding-inline: 10px;
+ margin-top: 10px;
+}
+.logo_1{
+    gap:10px;
+    height: 60px;
+    width: 113px;
+    padding-inline: 10px;
+    margin-top: 10px;
+}
+
+.logo_2{
+margin-left: 5%;
+height: 60px;
+width: 113px;
+padding-inline: 10px;
+margin-top: 10px;
+}
+hr{
+    background-color: rgb(176, 2, 2);
+    height: 5px;
+}
+.navbar2{
+    margin-left:75%;
+    display:flex;
+    padding :10px;
+    height:20px;
+    width: 100%;
+}
+
+ 
+.flex{
+    gap:20px;
+    font-size: large;
+    margin-top: 0%;
+    margin-left: 15%;
+    
+}
+.nav-toggle{
+    display:none;
+    
+}
+.profile{
+    margin-top:3px;
+}
+    
+a:hover{
+   text-decoration: dashed;
+   color: #007bff;
+   transition-duration: 0.3s;
+}
+a{
+    text-decoration: none;
+    color:black;
+    size: large;
+}
+.main{
+    margin-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.box1{
+
+ 
+ margin-left: 2%;
+ margin-right: 2%;
+ font-size: x-large;
+ text-overflow: ellipsis;
+}
+.box2{
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: 2%;
+    font-size: x-large;
+    text-overflow: ellipsis;
+    width: 92.4%;
+}
+.barcode{
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 2%;
+    font-size: x-large;
+
+}
+.input{
+    text-overflow: ellipsis;
+    width: 70%; 
+    height:20px;
+    border-radius: 5px;
+    font-size: large;
+    
+}
+h1{
+    font-size: x-large;
+    margin-top: 2%;
+}
+.but{
+    font-size: large; 
+    background-color: rgb(179, 3, 3);
+    margin-left: 45%;
+    padding-inline: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    
+    color: white;
+    margin-top: 2%;
+    border-radius: 4px;
+    border: none;
+}
+.bar{
+    
+    font-size: large; 
+    background-color: rgb(102, 100, 100);
+    padding-inline: 5px;
+    color: white;
+    margin-top: 2%;
+    border-radius: 4px;
+    border:slategrey;
+
+}
+.button:hover{
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.info{
+    margin-bottom: 1%;
+
+}
+
+.button{
+    display: flex;
+}
+
+.alert-success {
+    color: #3c763d;
+}
+
+.alert-error {
+    color: red;
+}
+
+@media screen and (max-width:991px){
+    .navbar{
+        display: none;
+    }
+    hr{
+        display:none;
+    }
+    .logo_2{
+         display:none;
+     }
+     .logo1{
+         display:none;
+     }
+     .logo_1{
+         display:none;
+     }
+    
+     .nav-toggle{
+        display:block;
+        text-align: right;
+        margin-top: 10px;
+        font-size: x-large;
+      
+      
+       
+     }
+     
+     .box1{
+        font-size: medium;
+
+    }
+    .box2{
+        font-size: medium;
+
+    }
+    .main-nav{
+        display:none;
+    }
+    .navbar2{
+     
+      
+        display:none;
+    }
+   .flex {
+    display: flex;
+    display: none;
+   
+   }
+    
+    h1{
+        font-size: large;
+        margin-top: 2%;
+    }
+}
+@media screen and (max-width:768px){
+    .logo_2{
+         display:none;
+     }
+     .logo1{
+         display:none;
+     }
+     .logo_1{
+         display:none;
+     }
+     .box1{
+         font-size: small;
+ 
+     }
+     .main-nav{
+        display:none;
+    }
+     .box2{
+        font-size: small;
+
+    }
+     .mainbox{
+         margin-inline: 10%;
+     }
+     h1{
+         font-size: medium;
+         margin-top: 2%;
+     }
+     .nav-toggle a{
+        display:block;
+        text-align: right;
+        margin-top: 10px;
+        font-size: large;
+       
+       
+     } 
+    .navbar2{
+     
+      
+        display:none;
+    }
+   .flex {
+    display: none;
+   
+   }
+     .but{
+        font-size: medium;
+     }
+ }
+ @media screen and (max-width:575px){
+    .logo_2{
+         display:none;
+     }
+     .logo1{
+         display:none;
+     }
+     .logo_1{
+         display:none;
+     }
+     .box1{
+         font-size: smaller;
+ 
+     }
+     .box2{
+        font-size: smaller;
+
+    }
+    .nav-toggle{
+        display:block;
+        text-align: right;
+        font-size: large;
+        margin-top: 10px;
+        
+    }
+    .main-nav{
+        display:none;
+    }
+    .navbar2{
+     
+      
+        display:none;
+    }
+   .flex {
+    display: none;
+   
+   }
+     .mainbox{
+         margin-inline: 5%;
+     }
+     h1{
+         font-size: 1rem;
+         margin-top: 2%;
+     }
+     .but{
+        font-size: small;
+     }
+ }
+ 
+ 
+ 
+ 

@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{% static 'user/profile.css'%}">
+</head>
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="{% static 'user/profile.png'%}" alt="Profile Picture">
+        </div>
+        <div class="profile-info">
+            <h2 >My Profile</h2>
+            {% block content %}
+            {% if user_data %}
+            <h2>Account Email-ID:{{email}}</h2>
+            <form id="profileForm" action="{% url 'myprofile' %}" method="post">
+                {% csrf_token  %}
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" value="{{user_data.full_name}}" required><br>
+                                
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" value="{{user_data.phone_number}}"  required><br>
+                
+                <label for="address">Address:</label><br>
+                <input type="text" id="HouseNo" name="HouseNo" placeholder="House no./Flat no." value="{{user_data.house_number}}" required><br>
+                <input type="text" id="Street" name="Street" placeholder="Street/Road" value="{{user_data.street}}"  required><br>
+                <input type="text" id="city" name="city" placeholder="City/Town" value="{{user_data.city}}" required><br>
+                <input type="text" id="district" name="district" placeholder="District" value="{{user_data.district}}" required><br>
+                <input type="number" id="Pincode" name="Pincode" placeholder="Pincode" value="{{user_data.pincode}}" required><br>
+                <input type="text" id="State" name="state" placeholder="State" value="{{user_data.state}}" required><br>
+                <input type="text" id="Country" name="Country" placeholder="Country" value="{{user_data.country}}" required><br>
+                <button type="submit">Save Changes</button>
+            </form>
+            {%else%}
+          
+        {%endif%}
+        {% endblock content %}
+            <a href="#" class="help-link">Help</a>
+        </div>
+    </div>
+</body>
+</html>
