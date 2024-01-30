@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,15 +83,11 @@ WSGI_APPLICATION = 'DNKinvoice.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+os.environ['DATABASE_URL'] = 'postgres://mvrdbvez:h4R4Y_9fw8YkDOCi9KZl7nrEoYyfAr-m@tiny.db.elephantsql.com/mvrdbvez'
 DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'userdata',
-       'USER': 'postgres',
-       'PASSWORD': 'Vardhan@20088',
-       'HOST': 'localhost',
-       'PORT': '5432',
-   }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
 }
 
 
