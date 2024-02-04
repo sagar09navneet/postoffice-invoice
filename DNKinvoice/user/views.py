@@ -161,7 +161,6 @@ def printinv(request):
         'barcode':barcode,
     }
     context = {'to_data': printContext, 'user_data': data}
-    print(context)
     return render(request, "print.html", context)
 
 
