@@ -23,28 +23,31 @@ body{
     justify-content: space-between;
 }
 .logo1{
- left: 0%;
- margin-right: 60%;
- height: 60px;
- width: 113px;
- padding-inline: 10px;
- margin-top: 10px;
-}
-.logo_1{
-    gap:10px;
+    left: 0%;
+    margin-right: 30%;
     height: 60px;
-    width: 113px;
+    width: 130px;
     padding-inline: 10px;
     margin-top: 10px;
-}
+   }
+   .logo_1{
+       margin-right: 35%;
+       height: 60px;
+       width: 130px;
+       padding-inline: 10px;
+       margin-top: 10px;
+     
+   }
 
 .logo_2{
-margin-left: 5%;
+
 height: 60px;
-width: 113px;
+width: 120px;
 padding-inline: 10px;
 margin-top: 10px;
 }
+
+
 hr{
     background-color: rgb(176, 2, 2);
     height: 5px;

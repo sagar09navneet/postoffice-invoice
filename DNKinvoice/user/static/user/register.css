@@ -25,39 +25,34 @@ body{
 .container{
     overflow:hidden;
 }
-.logo1 img{
+.logo1{
     left: 0%;
-    margin-right: 60%;
+    margin-right: 35%;
     height: 60px;
     width: 130px;
     padding-inline: 10px;
     margin-top: 10px;
-    
    }
-   .logo_1 img{
-      margin-left:500px;
-      
-       gap:10px;
+   .logo_1{
+       margin-right: 35%;
        height: 60px;
        width: 130px;
        padding-inline: 10px;
        margin-top: 10px;
      
    }
-   
-   .logo_2 img{
-    margin-left: 500px;
-   
-   
-   height: 60px;
-   width: 120px;
-   padding-inline: 10px;
-   margin-top: 10px;
-  
-   }
-   .logo_3 img{
+
+.logo_2{
+
+height: 60px;
+width: 120px;
+padding-inline: 10px;
+margin-top: 10px;
+}
+.logo_3 {
     display:none;
    }
+
 .mainbox{
     margin-top: 5%;
     text-align: center;
@@ -136,13 +131,13 @@ h1{
         font-size: medium;
 
     }
-    .logo_3 img{
-        height: 80px;
+    .logo_3 {
+        height: auto;
         width: 150px;
        
-        display:block;
+        display:inline-block;
         margin-top: 2%;
-        margin-left:20%;
+       margin-right: 60%;
         
      }
     .box2{
@@ -171,13 +166,13 @@ h1{
          font-size: small;
  
      }
-     .logo_3 img{
+     .logo_3 {
         height: 80px;
         width: 150px;
        
-        display:block;
-        margin-top: 2%;
-        margin-left:20%;
+        display:inline-block;
+        margin-top: 1%;
+        margin-left:6%;
         
      }
      .box2{
@@ -213,13 +208,13 @@ h1{
         font-size: smaller;
 
     }
-    .logo_3 img{
+    .logo_3 {
         height: 80px;
         width: 150px;
        
         display:block;
-        margin-top: 2%;
-        margin-left:20%;
+        margin-top: 1%;
+        margin-left:6%;
         
      }
      .mainbox{
