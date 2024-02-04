@@ -68,6 +68,11 @@
                 <label for="fromPhone">Phone Number:</label>
                 <input type="number" id="fromPhone" name="fromPhone" value="{{user_data.phone_number}}" class="input" readonly >
             </div>
+            <div>
+                <label for="Billid">Bill id:</label>
+                
+                <input type="text" id="Billid" name="Billid" value="{{user_data.billid}}"  class="input" readonly >
+            </div>
             <div class="info">
                 <label for="fromHouseNo">House/Building No:</label>
                 <input type="text" id="fromHouseNo" name="fromHouseNo" value="{{user_data.house_number}}" class="input" readonly >
@@ -108,7 +113,7 @@
             <legend>To</legend>
             <div class="info">
                 <label for="toName">Name:</label>
-                <input type="text" id="toName"  class="input" name="toName"  required>
+                <input type="text" id="toName"  class="input" name="toName"  required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
             </div>
             <div class="info">
                 <label for="toEmail">Email:</label>
@@ -116,7 +121,7 @@
             </div>
             <div class="info">
                 <label for="toPhone">Phone Number:</label>
-                <input type="number" id="toPhone" name="toPhone"class="input" required >
+                <input type="number" id="toPhone" name="toPhone"class="input" required pattern="[0-9]{10}" title="phone number should be of 10 digit">
             </div>
             <div class="info">
                 <label for="toHouseNo">House/Building No:</label>
@@ -128,23 +133,23 @@
             </div>
             <div class="info">
                 <label for="toCity">City/Town:</label>
-                <input type="text" id="toCity" name="toCity" class="input" required >
+                <input type="text" id="toCity" name="toCity" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
             </div>
             <div class="info">
                 <label for="toDistrict">District:</label>
-                <input type="text" id="toDistrict" name="toDistrict" class="input" required >
+                <input type="text" id="toDistrict" name="toDistrict" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
             </div>
             <div class="info">
                 <label for="toPincode">Pin Code:</label>
-                <input type="number" id="toPincode" name="toPincode" class="input" required >
+                <input type="number" id="toPincode" name="toPincode" class="input" required pattern="[0-9]" title="Only 6 digits allowed" >
             </div>
             <div class="info">
                 <label for="toState">State:</label>
-                <input type="text" id="toState" name="toState" class="input" required >
+                <input type="text" id="toState" name="toState" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
             </div>
             <div class="info">
                 <label for="toCountry">Country:</label>
-                <input type="text" id="toCountry" name="toCountry" class="input" required >
+                <input type="text" id="toCountry" name="toCountry" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" >
             </div>
         </fieldset></div>
         <div class="barcode">
@@ -168,9 +173,9 @@
         function generateBarcode() {
             const barcodeNo = document.getElementById('barcodeNo').value;
             JsBarcode("#barcode", barcodeNo, {
-                format: "CODE39",
-                width: 2,
-                height: 50,
+                format: "CODE128",
+                width: 1.40,
+                height: 35,
                 displayValue: true
             });
             return false;

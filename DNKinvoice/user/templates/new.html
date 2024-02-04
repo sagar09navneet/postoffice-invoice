@@ -1,0 +1,32 @@
+<div class="box1">
+    <div class="container">
+        <div>
+            <label for="name">Enter Full Name:</label><br>
+            <input type="text" id="name" name="name" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone" class="input" required pattern="[0-9]{10}" title="Phone number must be 10 digits">
+        </div>
+        <div>
+            <label for="HouseNo">House no./Flat no.:</label><br>
+            <input type="text" id="HouseNo" name="HouseNo" class="input" required>
+        </div>
+        <!-- Add constraints similarly for other fields -->
+    </div>
+</div>
+<br>
+<h1>CREATE ACCOUNT:</h1>
+<div class="box2">
+    <div class="container">
+        <div>
+            <label for="email"><b>Email Address:</b></label><br>
+            <input type="email" id="email" name="email" class="input" required>
+        </div>
+        <div>
+            <label for="password"><b>Password:</b>(only strong or very strong passwords allowed)</label><br>
+            <input type="password" id="password1" name="password" class="input" required minlength="8">
+        </div>
+    </div>
+</div>
+

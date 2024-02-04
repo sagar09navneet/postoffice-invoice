@@ -12,9 +12,24 @@
         <h1>Shipping Details</h1>
         <!-- Render user data in the form -->
         <fieldset class="box1">
+            <div class="to-details">
+            
+                <h1>To</h1>
+                <p>Name: {{ to_data.Name }}</p>
+                <div class="add"><p class="address">House/Building No:{{to_data.HouseNumber}} ,</p>
+                <p class="address">Street/Road No: {{to_data.Street }},</p>
+                <p class="address">City/Town: {{ to_data.City }},</p>
+                <p class="address">District:{{ to_data.District }},</p>
+                <p class="address">Pin Code:{{ to_data.Pincode }}</p></div>
+                <p>State:{{ to_data.State}}</p>
+                <p>Country:{{ to_data.Country}}</p>
+                <p>Phone Number: {{ to_data.PhoneNumber }}</p>
+                
+              
+            </div>
         <div class="from-details">
             
-            <h2>From</h2>
+            <h3>From</h3>
             <p>Name: {{ to_data.full_name }}</p>
             <div class="add"><p class="address">House/Building No: {{ user_data.house_number }},</p>
             <p class="address">Street/Road No: {{user_data.street }},</p>
@@ -24,24 +39,11 @@
             <p>State:{{ user_data.state}}</p>
             <p>Country:{{ user_data.country}}</p>
             <p>Phone Number:{{ user_data.phone_number}}</p>
+            <p>Bill Id:{{ user_data.billid}}</p>
            
         </div>
         <!-- TO details form fields -->
-        <div class="to-details">
-            
-            <h2>To</h2>
-            <p>Name: {{ to_data.Name }}</p>
-            <div class="add"><p class="address">House/Building No:{{to_data.HouseNumber}} ,</p>
-            <p class="address">Street/Road No: {{to_data.Street }},</p>
-            <p class="address">City/Town: {{ to_data.City }},</p>
-            <p class="address">District:{{ to_data.District }},</p>
-            <p class="address">Pin Code:{{ to_data.Pincode }}</p></div>
-            <p>State:{{ to_data.State}}</p>
-            <p>Country:{{ to_data.Country}}</p>
-            <p>Phone Number: {{ to_data.PhoneNumber }}</p>
-            
-          
-        </div>
+       
         <div class="barcode-section">
             <svg id="barcode"></svg>
         </div>
@@ -63,9 +65,9 @@
         const barcodeNo = "{{ to_data.barcode }}";
 
         JsBarcode("#barcode", barcodeNo, {
-            format: "CODE39",
-            width: 2,
-            height: 50,
+            format: "CODE128",
+            width: 1.40,
+            height: 35,
             displayValue: true
         });
     }

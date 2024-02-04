@@ -35,14 +35,18 @@
         <div class="box1">
             <div class="container">
         <div>
-            <label for="name">Enter Full Name:</label>
-            <br>
-            <input type="text" id="name" name="name"  class="input" required >
+            <label for="name">Enter Full Name:</label><br>
+            <input type="text" id="name" name="name" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
         </div>
         <div>
             <label for="phone">Phone Number:</label>
             <br>
-            <input type="number" id="phone" name="phone" class="input" required >
+            <input type="number" id="phone" name="phone" class="input" required pattern="[0-9]{10}" title="Phone Numbe Must be 10 digit" >
+        </div>
+        <div>
+            <label for="Billid">Bill id:</label>
+            <br>
+            <input type="text" id="Billid" name="Billid" class="input" required  >
         </div>
         <div>
             <label for="HouseNo">House no./Flat no.:</label>
@@ -57,27 +61,27 @@
         <div>
             <label for="city">city/town:</label>
             <br>
-            <input type="text" id="city" name="city" class="input" required >
+            <input type="text" id="city" name="city" class="input"  required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
         </div>
         <div>
             <label for="district">District:</label>
             <br>
-            <input type="text" id="district" name="district" class="input" required >
+            <input type="text" id="district" name="district" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed">
         </div>
         <div>
             <label for="Pincode">Pincode:</label>
             <br>
-            <input type="number" id="Pincode" name="Pincode" class="input" required >
+            <input type="number" id="Pincode" name="Pincode" class="input" required pattern="[0-9]{10}" title="Pin code Must be 6 digit" >
         </div>
         <div>
             <label for="State">State:</label>
             <br>
-            <input type="text" id="State" name="state" class="input" rdequired >
+            <input type="text" id="State" name="state" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" >
         </div>
         <div>
             <label for="Country">Country:</label>
             <br>
-            <input type="text" id="Country" name="Country" class="input" required >
+            <input type="text" id="Country" name="Country" class="input" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed" >
         </div>
         </div></div>
         <br>

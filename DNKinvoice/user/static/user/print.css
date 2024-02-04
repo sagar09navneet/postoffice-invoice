@@ -9,9 +9,12 @@ body{
 .add{
     display:flex;
     margin: 0%;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
 }
 .address{
     margin:0px;
+    gap:5px;
 }
 .barcode-section {
     margin-top: 2%;
