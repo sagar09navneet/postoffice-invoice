@@ -14,3 +14,4 @@ class UserData(models.Model):
     pincode = models.IntegerField()
     state = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
+    bill_id=models.IntegerField()

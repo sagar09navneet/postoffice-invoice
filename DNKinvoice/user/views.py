@@ -21,6 +21,7 @@ def register(request):
     if request.method =="POST":
         Name=request.POST.get('name')
         PhoneNumber=request.POST.get('phone')
+        bill_id=request.POST.get('Bill-id')
         HouseNumber=request.POST.get('HouseNo')
         Street=request.POST.get('Street')
         City=request.POST.get('city')
@@ -53,7 +54,8 @@ def register(request):
         city=City,
         district=District,
         pincode=Pincode,
-        country=Country
+        country=Country,
+        bill_id=bill_id,
         )
         
         messages.success(request,"Your Account Has Been Successfully Created!")
@@ -183,6 +185,7 @@ def myprofile(request):
         user_data.pincode=request.POST.get('Pincode')
         user_data.state=request.POST.get('state')
         user_data.country=request.POST.get('Country')
+        user_data.bill_id=request.POST.get('bill-id')
         user_data.save()    
         
         user_data = UserData.objects.get(user=request.user)
