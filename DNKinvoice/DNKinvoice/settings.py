@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-148l2(&272z==y&!)6%xr)gr*kxw4!byf!a!9o9x2d07u9l)wi'
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ["DEBUG"]
 
 ALLOWED_HOSTS = []
 
@@ -83,7 +83,6 @@ WSGI_APPLICATION = 'DNKinvoice.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-os.environ['DATABASE_URL'] = 'postgres://mvrdbvez:h4R4Y_9fw8YkDOCi9KZl7nrEoYyfAr-m@tiny.db.elephantsql.com/mvrdbvez'
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL')
