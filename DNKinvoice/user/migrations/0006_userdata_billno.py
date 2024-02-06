@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='userdata',
             name='billno',
-            field=models.IntegerField(default=12345),
+            field=models.CharField(default=12345),
             preserve_default=False,
         ),
     ]
