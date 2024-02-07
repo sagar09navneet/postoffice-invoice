@@ -21,8 +21,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /code/
 
 # Run database migrations
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
 # Expose port 8000 to the outside world
 EXPOSE 8000
