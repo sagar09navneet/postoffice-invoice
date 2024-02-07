@@ -177,7 +177,7 @@ def myprofile(request):
         user_data = UserData.objects.get(user=request.user)
         user_data.full_name=request.POST.get('Name')
         user_data.phone_number=request.POST.get('phone')
-        user_data.bill_id = request.POST.get('bill-id', '') 
+        user_data.bill_id = request.POST.get('bill_id', '') 
         user_data.house_number=request.POST.get('HouseNo')
         user_data.street=request.POST.get('Street')
         user_data.city=request.POST.get('city')
